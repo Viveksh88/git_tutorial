@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.nav {
+    height: 54px;
+    line-height: 52px;
+    background-color:rgb(48, 46, 46);
+}
+.menu {
+    margin: 0 44px;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: gray;
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: 16px;
+}
+label {
+    margin: 0px 12px;
+    font-size: 34px;
+    line-height: 53px;
+    display: none;
+    width: 23px;
+    float: left;
+    color: white;
+}
+#toggle {
+    display: none;
+}
+.product-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.h-container{
+    margin-top: 55px;
+}
+.h-container .heading{
+    font-size: 36px;
+    display: inline-block;
+}
+.h-container .secondary{
+    font-size: 24px;
+    display: inline-block;
+    color: grey;
+    margin: 0 7px;
+}
+hr{
+   border: 1px solid rgb(243, 242, 242);
+}
+.product:nth-child(3n){
+    float: right;
+}
+.product:nth-child(3n-1){
+    margin: 15px 56px;
+}
+.product img, p {
+    width: 100%;
+}
+.product-right{
+    margin: 0 auto;
+}
+.product{
+    width: 30%;
+    float: left;
+    margin: 15px 0;
+}
+.p-name{
+    font-size: 20px;
+    color: rgb(15, 127, 201);
+    margin-top:12px;
+}
+.text{
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+hr{
+    border: 1px solid rgb(243, 242, 242);
+}
+.footer{
+    margin-top: 90%;   
+}
+.footer div{
+    margin: 6% 0;
+}
+/* screen width 475px-320px (mobile) */
+@media screen and (max-width:425px) and (min-width:320px){
+    .nav{
+        border-bottom:0px;
+    }
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0 16px;
+        line-height: 40px;     
+    }
+    #toggle:checked + .menu {
+        display: block;
+        width: 100%;
+        float: left;
+        margin: 0 auto;
+        background-color:rgb(48, 46, 46);
+    }
+    a:hover{
+       background-color: rgb(230, 68, 68);
+    }
+    .product-container {
+        position: absolute;
+        z-index: -1;
+        margin: 0 16px;
+    }
+    .h-container {
+        margin-top: 30px;
+    }
+    .h-container .heading {
+        font-size: 21px;
+    }
+    .h-container .secondary {
+        font-size: 12px;
+    }
+    .product {
+        width: 100%;
+        margin: 16px 0;
+    }
+    .product:nth-child(3n-1) {
+        margin:0;
+    }
+}
