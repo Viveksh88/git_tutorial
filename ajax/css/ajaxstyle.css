@@ -1,0 +1,26 @@
+table {
+    border: 1px solid black;
+}
+th {
+    width: 20%;
+    border: 3px solid white;
+    background-color:rgb(23, 112, 245);
+    color: white;
+    text-align: center;
+    
+}
+td {
+    border: 2px solid white;
+    background-color:rgb(50, 124, 235);
+    color: white;
+    text-align: center;
+
+}
+.data_display{
+    color: rgb(10, 128, 247);
+    font-size: 28px;
+    margin: 16px auto;
+}
+#add_user{
+    margin: 14px 0;
+}
