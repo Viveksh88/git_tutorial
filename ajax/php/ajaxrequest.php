@@ -9,14 +9,13 @@ if(isset($_POST['username'])){
     $msg = $_POST['message'];
     $date = $_POST['date'];
 
-    $insert_query = mysqli_query($con,"INSERT INTO ajax(name,email,message,date) VALUES('$name','$email','$msg','$date')");     
+    $insert_query = mysqli_query($con,"INSERT INTO ajax (name,email,message,date) VALUES('$name','$email','$msg','$date')");     
 }
 
 // For Getting Data from DataBase....
 $sql_query = mysqli_query($con,"SELECT * FROM ajax ORDER BY Id DESC LIMIT 5");
 
-while($row = mysqli_fetch_array($sql_query)) 
-{
+while($row = mysqli_fetch_array($sql_query)) {
    $name = $row['name'];
    $email = $row['email'];
    $msg = $row['message'];

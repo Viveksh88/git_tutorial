@@ -1,14 +1,23 @@
-$(document).ready(function()
-{
+$(document).ready(function(){
     // Timer inbuilt Function Call Every 5 seconds...
-    setInterval(function()
-        {
-        getData();
+    setInterval(function(){
+            getData();
         },5000);
+
+        $('body').on('hidden.bs.modal', '.modal', function () { 
+            $(this).find('input[type="text"],input[type="email"],input[type="date"],textarea').each(function(){
+              if (this.defaultValue != '' || this.value != this.defaultValue) {
+                   this.value = this.defaultValue; 
+              } else { 
+                  this.value = '';
+              }
+            }); 
+          }); 
         
         // sending Data Into Database using Ajax...
          
     $("#submit").click(function(){
+        var reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
         var name = $('#inputName').val();
         var email = $('#inputEmail').val();
         var message = $('#inputMessage').val();
@@ -17,8 +26,12 @@ $(document).ready(function()
             alert('Please enter your name.');
             $('#inputName').focus();
             return false;
-        }else if(email.trim() == '' ){
+        }else if(email.trim() == ''){
             alert('Please enter your email.');
+            $('#inputEmail').focus();
+            return false;
+        }else if(email.trim() != '' && !reg.test(email)){
+            alert('Please enter a valid email address.');
             $('#inputEmail').focus();
             return false;
         }else if(message.trim() == '' ){
@@ -48,18 +61,15 @@ $(document).ready(function()
     });
     
     //    Getting Data From Database using Ajax in Json SVGFEColorMatrixElement..
-    function getData()
-    {     
+    function getData(){     
         $.ajax({
             url: '../php/ajaxrequest.php',
             type: 'get',
             dataType: 'JSON',
-            success: function(response)
-            {
+            success: function(response){
                 var len = response.length;
                 $("#userTable").html("");
-                for(var i=0; i<len; i++)
-                {
+                for(var i=0; i<len; i++){
                     var name = response[i].name;
                     var email = response[i].email;
                     var message = response[i].msg;
