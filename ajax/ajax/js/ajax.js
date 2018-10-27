@@ -1,5 +1,4 @@
 $(document).ready(function(){
-<<<<<<< HEAD
     var per_page=5;
     var Time;
     var page;
@@ -25,13 +24,6 @@ $(document).ready(function(){
     // Refresh function Ends here..
     
     // Event to Reset Data  after submitting Modal-form
-=======
-    // Timer inbuilt Function Call Every 5 seconds...
-    setInterval(function(){
-            getData();
-        },5000);
-
->>>>>>> c35f678fdc1c8c7063839990de41732944bd22f1
         $('body').on('hidden.bs.modal', '.modal', function () { 
             $(this).find('input[type="text"],input[type="email"],input[type="date"],textarea').each(function(){
               if (this.defaultValue != '' || this.value != this.defaultValue) {
@@ -41,11 +33,8 @@ $(document).ready(function(){
               }
             }); 
           }); 
-<<<<<<< HEAD
         //   Event ends Headers...
 
-=======
->>>>>>> c35f678fdc1c8c7063839990de41732944bd22f1
         
         // sending Data Into Database using Ajax...
          
@@ -97,13 +86,8 @@ $(document).ready(function(){
     });
     // Sending data Ends....
     
-<<<<<<< HEAD
     //    Getting Data From Database using Ajax in Json formate..
     function getData(page,per_page){     
-=======
-    //    Getting Data From Database using Ajax in Json SVGFEColorMatrixElement..
-    function getData(){     
->>>>>>> c35f678fdc1c8c7063839990de41732944bd22f1
         $.ajax({
             url: "../php/ajaxrequest.php",
             type: "get",
