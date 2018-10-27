@@ -15,6 +15,7 @@ $(document).ready(function(){
         per_page = value.currentTarget.innerHTML;  
         calling_functions();
         if(page>1){
+        
             clearInterval(Time); 
         }      
     });
