@@ -1,48 +1,37 @@
 $(document).ready(function(){
     var per_page=5;
-    var Time;
     var page;
+    var row_id;
 
     calling_functions();
+    
 
     function calling_functions(){
-        interval();
         getData(page,per_page);
-        load_pagination(per_page);
+        load_pagination(per_page);      
     } 
     // Getting data per_page user want to see..
     $(".per_page_data").click(function(value){
         per_page = value.currentTarget.innerHTML;  
-        calling_functions();
-        if(page>1){
-        
-            clearInterval(Time); 
-        }      
+        calling_functions();     
     });
-    // Page refresh function Every 5sec.
-    function interval(){
-        Time = setInterval(function(){
-            getData(page,per_page),load_pagination(per_page);
-        },5000);
-    } 
-    // Refresh function Ends here..
     
     // Event to Reset Data  after submitting Modal-form
         $('body').on('hidden.bs.modal', '.modal', function () { 
             $(this).find('input[type="text"],input[type="email"],input[type="date"],textarea').each(function(){
-              if (this.defaultValue != '' || this.value != this.defaultValue) {
+              if(this.defaultValue != '' || this.value != this.defaultValue) {
                    this.value = this.defaultValue; 
-              } else { 
+                } else { 
                   this.value = '';
-              }
+                }
             }); 
           }); 
         //   Event ends Headers...
 
-        
         // sending Data Into Database using Ajax...
          
-    $("#submit").click(function(){
+    $("#submit").click(function(value){
+        // console.log(value);
         var reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
         var name = $('#inputName').val();
         var email = $('#inputEmail').val();
@@ -77,10 +66,7 @@ $(document).ready(function(){
                 success:function(){
                     alert("Your form has been Submitted successfully");
                     $("#myModal").modal('hide');
-                    calling_functions();     
-                    if(page>1){
-                        clearInterval(Time); 
-                    }  
+                    calling_functions();      
                 },
                 error:function(){
                     alert("Error");
@@ -101,20 +87,57 @@ $(document).ready(function(){
                 var len = response.length;
                 $("#userTable").html("");
                 for(var i=0; i<len; i++){
+                    var id = response[i].id;
                     var name = response[i].name;
                     var email = response[i].email;
                     var message = response[i].msg;
                     var Date = response[i].date;
 
-                    var tr_str = "<tr>" +
+                    var tr_str = '<tr id="'+id+'">'+
                         
-                        "<td>" + name + "</td>" +
-                        "<td>" + email + "</td>" +
-                        "<td>" + message + "</td>" +
-                        "<td>" + Date + "</td>" +
+                        "<td class='row_data name'>" + name + "</td>" +
+                        "<td class='row_data email'>" + email + "</td>" +
+                        "<td class='row_data message'>" + message + "</td>" +
+                        "<td class='row_data date'>" + Date + "</td>" +
                         "</tr>";
                         $("#userTable").append(tr_str);   
                 }
+                edit();
+                submit_edit_data();
+            }
+        });   
+    } 
+        // make div editable > start
+    function edit(){
+        $(document).on('dblclick', '.row_data', function(event) 
+        {
+            event.preventDefault(); 
+            //make div editable
+            $(this).closest('tr').attr('contenteditable', 'true');
+            $(this).focus();            
+        });
+    }
+    // make div editable > end
+
+    function submit_edit_data(){
+        $(document).on('focusout keyup', 'tr', function(event){
+            if(event.keyCode == 13){
+               var id = $(this).attr('id'); 
+               var name = $(this).find('.name').text();
+               var email = $(this).find('.email').text();
+               var msg = $(this).find('.message').text();
+               var date = $(this).find('.date').text();
+               $.ajax({
+                    url:'../php/editdata.php',
+                    type:'POST',
+                    data:{id:id,name:name,email:email,msg:msg,date:date},
+                    success:function(){
+                        calling_functions();                               
+                    },
+                    error:function(){
+                        alert("Error");
+                    }    
+                });
             }
         });
     }
@@ -138,10 +161,5 @@ $(document).ready(function(){
     $(document).on('click', '.page-link', function(){  
         var page = $(this).attr("id"); 
         getData(page,per_page); 
-        if(page==1){
-            interval();
-        }else{
-            clearInterval(Time); 
-        }
    }); 
 });

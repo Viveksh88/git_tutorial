@@ -1,0 +1,711 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-image: burlywood;
+    background-image: url(../images/wood.png);
+    font-family: sans-serif;
+}
+label {
+    margin: 0px 12px;
+    font-size: 34px;
+    line-height: 53px;
+    display: none;
+    width: 23px;
+    float: left;
+    color: black;
+}
+#toggle {
+    display: none;
+}
+.main_container{
+    margin: 0 auto;
+    max-width: 80%;
+    border: 3px solid white;
+    background-color: white;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    background: linear-gradient(to bottom, rgba(252,255,244,1) 90%,rgba(233,233,206,1) 100%); 
+}
+.header_container{
+    width: 100%;
+   
+}
+.starwest_logo{
+    margin: 0;   
+}
+.starwest_logo img{
+    margin: 10px 12px;
+}
+.leaf_container{
+    position: absolute;
+    left: 61%;
+    top: 0px;
+    width: 10%;
+    overflow: hidden;
+}
+.leaf1{
+    position: inherit;
+    bottom: 40px;
+    right: 51px;
+}
+.leaf2{
+    position: relative;
+    left: 48px;
+    bottom: 22px;
+}
+
+.starwest_logo .second_tag{
+    display: inline-block;
+    position: absolute;
+    font-size: 25px;
+    margin: 18px 70px;
+    color: rgb(21, 85, 21)
+}
+.starwest_logo .second_tag span{
+    font-size: 30px;
+}
+.header_right{
+    float: right;
+    margin: 3px 0;
+    font-size: 13px;
+}
+.right_tag{
+    margin: 0 88px;    
+}
+.header_links{
+    position: relative;
+    margin: 6px 52px;
+}
+.header_links a{
+    color: rgb(175, 70, 70);
+    
+}
+form{
+    margin: 10px 12px;
+}
+form input[type="text"]{
+    width: 220px;
+    padding: 2px 0;
+}
+form button{
+    position: absolute;
+    padding: 2px 0px;
+}
+.navbar {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 35px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 55%;
+}
+
+.navbar a {
+    float: left;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 9px 19px;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);
+    margin: 0 1px;
+}
+.ph-nav{
+    color: white; 
+    text-decoration: none;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);;
+    width: 481px;
+    display: table;
+    position: relative;
+    float: right;
+    bottom: 35px;
+    left: 468px;
+    height: 35px;  
+}
+.ph-nav span{
+    float: right;
+    color: white;
+    font-size: 20px;
+    padding: 6px 2px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 14px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 9px 19px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.product_container{
+    border: 1px solid whitesmoke;
+    width: 80%;
+    min-height: 89vh;
+    background: linear-gradient(to bottom, rgba(252,255,244,1) 90%,rgba(233,233,206,1) 100%); 
+    margin: 14px auto;
+    border-radius: 7px;
+}
+.left_portion{
+    width: 24%;
+    display: inline-block;
+    position: relative;
+    bottom: 16px;
+}
+.first_block{
+    border: 1px solid black;
+    margin: 7px;
+    background-color: lightgrey;
+}
+.first_p_head{
+    border: 1px solid whitesmoke;
+    padding: 2px 6px;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);
+    color: white;
+}
+.first_p_options{
+    padding: 14px 26px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.pdf_download img{
+    width: 94%;
+    margin: 2px 4px;
+}
+
+.second_block{
+    border: 1px solid black;
+    width: 93%;
+    margin: 0 7px;
+    position: relative;
+}
+.woman_img{
+    overflow: hidden;
+}
+.woman_img img{
+    margin: 0 -17px;
+}
+.assist_text{
+    position: absolute;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px 0;
+    background: linear-gradient(to bottom, rgba(238,238,238,0.7) 9%,rgba(238,238,238,0.7) 100%); 
+    
+}
+.assist_text span{
+    font-size: 20px;
+}
+.call{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 5px 0;
+    font-size: 20px;
+    background: linear-gradient(to bottom, rgba(238,238,238,0.7) 9%,rgba(238,238,238,0.7) 100%);
+}
+.third_block{
+    border: 1px solid black;
+    margin: 7px;
+    width: 93%;
+}
+.third_head_text{
+    border: 1px solid black;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);
+    color: white;
+    padding: 4px;
+    font-size: 15px;
+}
+.third_head_text span{
+    font-size: 18px;
+}
+.third_text{
+    width: 100%;
+    text-align: center;
+}
+.checkbox_items{
+    margin: 15px 21px;
+}
+.checkbox_items .updates{
+    margin: 2px 0;
+}
+.check_in{
+    display: inline-block;
+}
+
+.signup_form{
+    text-align: center;
+}
+.signup_form input[type="text"]{
+    width: 82%;
+    margin: 2px 0;
+}
+.third_block button{
+    margin: 5px 58px;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);
+    color: white;
+    border: 1px solid brown;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+.logo{
+    margin: 43px 48px;
+}
+.logo .logo_1{
+    position: absolute; 
+}
+.logo .logo_2{
+    margin: 0 70px;
+}
+.right_portion{
+    border: 1px solid white;
+    border-radius: 7px;
+    float: right;
+    width: 784px;
+    position: relative;
+    bottom: 16px;
+}
+.main_layer{
+       
+}
+.main_layer img{
+    width: 100%;
+    
+}
+.pagination{
+   position: absolute;
+    font-size: 20px;
+    bottom: 4px;
+    color: gray;
+    width: 142px;
+    background-color: gainsboro;
+    padding: 0 6px;
+    border: 1px solid gainsboro;
+    border-bottom-left-radius: 7px;
+    
+}
+.pagination img{
+    width: 3%;    
+}
+.layer_text{
+   line-height: 47px;
+    padding: 0 15px;
+    margin: 0 10px;
+    position: absolute;
+    border: 1px solid rgb(206, 201, 201);
+    background-color: rgba(206, 201, 201,0.7);
+    width: 41%;
+    font-size: 33px;
+    bottom: 20px;
+    right: 0;
+}
+.r_second{
+        position: absolute;
+    top: 105%;
+    left: 3%;
+}
+.right_second_heading{
+        font-size: 24px;
+    /* top: 0; */
+    margin: 0 22px;
+}
+.r_second_content{
+    margin: 12px 0;
+    width: 74%;
+}
+.content{
+    margin: 14px 0;
+}
+.content img{
+    position: absolute;
+}
+.text_content{
+    display: inline-block;
+    margin: 4px 29px;
+    font-size: 13px;
+}
+.r_right_block{
+    position: absolute;
+    float: right;
+    top: 103%;
+    left: 70%;
+    width: 28%;
+    min-height: 41vh;
+}
+.r_r_first{
+    width: 100%;
+    border: 1px solid black;
+}
+.r_r_heading{
+    border: 1px solid whitesmoke;
+    background: linear-gradient(to bottom, #f0b7a1 0%,#bf6e4e 36%,#bf6e4e 36%,#8c3310 71%,#752201 98%);
+    color: white;
+    
+}
+.r_r_heading span{
+    font-size: 20px;
+}
+.r_r_f_text{
+    margin:8px 0;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+.r_r_f_text_1{
+    margin:17px 0;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+
+}
+.r_r_second{
+    border: 1px solid black;
+    margin: 8px 0;
+    width: 100%;
+}
+.r_r_s_text_container{
+    font-size: 12px;
+    margin: 12px;
+    line-height: 28px;
+}
+.footer{
+    margin: 0 30px;
+}
+.footer_img{
+    float: left;
+    width: 22%;
+    position: relative;
+    top: 32px;
+    left: 24px;
+}
+.footer_img img{
+    width: 70%;
+    
+}
+.break{
+    border: 1px solid grey;
+    display: inline-table;
+    width: 0%;
+    min-height: 100px;
+    position: absolute;
+}
+.p_heading{
+    margin: 0px 13px;
+    font-size: 13px;
+}
+.p_details{
+    display: inline-table;
+    width: 14%;
+    font-size: 9px;
+}
+.heading_content{
+    font-size: 11px;
+    line-height: 18px;
+    margin: 6px 14px;
+}
+.p_details_last{
+    display: inline-table;
+    width: 12%;
+    float: right;
+    font-size: 11px;
+    position: relative;
+    top: 29px;
+    right: 30px;
+    line-height: 15px;  
+}
+@media screen and (width:1440px){
+    .ph-nav{
+        width: 93%;
+        left: 515px;
+    }
+    .leaf_container{
+        left: 64%;
+    }
+    .right_portion{
+        width: 75%;
+    }
+    
+}
+/* @media screen and (width:1024px){
+    .navbar a{
+        padding: 9px 5px;
+    }
+    .ph-nav{
+        width: 83%;
+        left: 369px;
+    }
+    .layer_text{
+        line-height: 44px;
+        font-size: 26px;
+    }
+    .starwest_logo .second_tag{
+        font-size: 20px;
+        margin: 18px 6px;
+    }
+    .checkbox_items {
+        margin: 15px 9px;
+    }
+    .third_block button {
+        margin: 5px 49px;
+        padding: 4px 8px;
+    }
+    .logo .logo_2 {
+        margin: 0 56px;
+    }
+    .call {
+        font-size: 18px;
+    }
+    
+} */
+@media screen and (max-width:768px){
+    .navbar{
+        border-bottom:0px;
+    }
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .a_navbar,.ph-nav {
+        width: 100%;
+        display: none;
+    }
+    .a_navbar a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0 2px;
+        line-height: 40px; 
+        width: 93%;    
+    }
+    .dropdown button{
+        width: 93%;
+        
+    }
+    #toggle:checked + .a_navbar {
+        display: block;
+        width: 80%;
+        float: left;
+        margin: 44px auto;
+        background-color: black;
+        position: absolute;
+        z-index: 1;
+    }
+    a:hover{
+       background-color: rgb(230, 68, 68);
+    }
+    .leaf_container{
+        display: none;
+    }
+    .pagination {
+        font-size: 18px; 
+        width: 93px;
+    }
+    .layer_text{
+        line-height: 25px;
+        font-size: 16px;
+    } 
+    .left_portion {
+        width: 37%;
+        bottom: 3px;
+    }
+    .right_portion{
+        max-width: 62%;
+        bottom: 0;
+    }
+    .right_second_heading {
+        font-size: 18px;
+    }
+    .r_second_content {
+        width: 65%;
+    }
+    .text_content{
+        font-size: 11px;
+    }
+    .r_r_s_text_container {
+        font-size: 10px;
+    }
+    .r_r_f_text , .r_r_f_text_1 {
+        font-size: 11px;
+        line-height: 18px;
+    }
+    .r_right_block {
+        left: 62%;
+        width: 37%;
+    }
+    .p_heading {
+        font-size: 10px;
+    }
+    .heading_content {
+        font-size: 6px;
+    }
+    .p_details_last {
+        width: 14%;
+        font-size: 10px;
+        right: 0px;
+        left: 15px;
+    }
+    .footer_img {
+       left: 4px;
+    }
+    .dropdown{
+        width: 107%;
+    }
+    .starwest_logo .second_tag {
+        font-size: 21px;
+        margin: 8px 95px;
+    }
+    .header_right{
+    top: 43px;
+    position: relative;
+    right: 0px;
+    }
+}
+@media screen and (width:425px){
+   .starwest_logo img {
+        width: 93%;
+   }
+   .r_r_f_text, .r_r_f_text_1 {
+    font-size: 16px;
+   }
+   .r_r_s_text_container {
+    font-size: 17px;
+   }
+   form{
+    width: 90%;
+   }
+   .text_content {
+    font-size: 15px;
+   }
+   #toggle:checked + .a_navbar {
+    display: block;
+    width: 80%;
+    float: left;
+    margin: 44px auto;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+}
+   .starwest_logo .second_tag {
+    font-size: 16px;
+    position: unset;
+    margin: 0 70px;
+
+   }
+   .a_navbar a {
+    line-height: 24px;
+    width: 88%;
+   }
+   .header_right {
+    float: none;
+    text-align: center;
+    top: 0;
+   }
+   .left_portion {
+    width: 100%;
+   }
+   .right_portion {
+    max-width: 100%;
+   }
+   .layer_text {
+    line-height: 19px;
+    font-size: 14px;
+    bottom: 86%;
+    width: 46%;
+   }
+   .r_second {
+    position: relative;
+    left: 0;
+   }
+   .pagination{
+    bottom: 84%;
+    font-size: 16px;
+   }
+   .r_right_block {
+    width: 100%;
+    position: relative;
+    left: 0;
+   }
+   .r_second_content {
+    width: 100%;
+   }
+   .footer{
+       width: 100%;
+       margin: 0;
+   }
+   .footer_img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    text-align: center;
+    left: 0;
+}
+.first_p_options {
+    line-height: 28px;
+    font-size: 26px;
+}
+.p_heading{
+    font-size: 24px;
+    margin: 0 2px;
+}
+.third_block button {
+    margin: 5px 69px;
+}
+.logo {
+    margin: 43px 59px;
+}
+.heading_content {
+    line-height: 22px;
+    margin: 6px 14px;
+    font-size: 20px;
+}
+.break{
+    display: inline-table;
+    width: 100%;
+    min-height: 0;
+    position: unset;
+}
+.p_details{
+    width: 100%;
+    text-align: center;
+}
+.p_details_last {
+    font-size: 21px;
+    width: 100%;
+    position: unset;
+    line-height: 32px;
+    float: none;
+}
+}

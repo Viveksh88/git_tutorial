@@ -27,12 +27,14 @@ $start_from = ($page - 1)*$record_per_page;
 $sql_query = mysqli_query($con,"SELECT * FROM ajax ORDER BY Id ASC LIMIT $start_from,$record_per_page");
 
 while($row = mysqli_fetch_array($sql_query)) {
+   $id = $row['id'];
    $name = $row['name'];
    $email = $row['email'];
    $msg = $row['message'];
    $date = $row['date'];
 
    $data[] = array(
+       "id" =>$id,
        "name" =>$name,
        "email" =>$email,
        "msg" =>$msg,
