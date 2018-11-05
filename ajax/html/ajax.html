@@ -11,7 +11,15 @@
 <body>
     <!-- Main Container... -->
     <div class="container">
-        <div class="data_display">Last 5 Data Entry From DatabAse...!</div>
+        <div class="data_display"> Data Entry From DatabAse...!</div>
+        <div class="dropdown">
+            <button class="dropbtn">Data Per Page </button>
+            <div class="dropdown-content">
+              <a class="per_page_data" href="#" value="5">5</a>
+              <a class="per_page_data" href="#" value="10">10</a>
+              <a class="per_page_data" href="#" value="15">15</a>
+            </div>
+          </div>
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -24,6 +32,11 @@
             <tbody id="userTable">        
             </tbody>
         </table>
+
+        <!--padination -->
+            <ul class="pagination justify-content-center" id="pagination_data">            
+            </ul>
+          <!--Pagination close  -->
         <button class="btn btn-success btn-md" id="add_user" data-toggle="modal" data-target=".modal">Add User</button>
         
         <!-- Modal Starts -->
